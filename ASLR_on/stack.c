@@ -13,7 +13,9 @@ int bof(char *str)
 }
 
 int main(int argc, char **argv)
-{	
+{
+	for(int i=0;i<20;i++)
+		printf("New process created\n");
 	char str[517];
 	FILE *badfile;
 	badfile = fopen("badfile", "r");

