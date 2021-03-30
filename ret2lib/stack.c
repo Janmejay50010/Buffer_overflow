@@ -1,7 +1,8 @@
 /* stack.c */
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
 int bof(char *str)
 {
 	char buffer[400];
@@ -13,10 +14,7 @@ int bof(char *str)
 }
 
 int main(int argc, char **argv)
-
-{	for(int i=0; i<20; i++){
-		printf("New process created\n");
-	}
+{
 	char str[517];
 	FILE *badfile;
 	badfile = fopen("badfile", "r");

